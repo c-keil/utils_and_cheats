@@ -29,7 +29,8 @@ Screen is useful for starting long tasks over ssh. For simple use you can start 
 ```bash
 screen 
 ```
-The run whatever commands... and then close the screen with `ctrl` `A`+`D`. The session can be reopened with `screen -r`.
+The run whatever commands... and then close the screen with `ctrl` `A`+`D`. The session can be reopened with `screen -r`. End a screen session with `exit`, like closing an ssh connection.
+
 ### More Screen
 You can use `Screen -S <NAME>` to make a named "screen session" (instead of numbered). This lets you restart it by name.
 You can use `Screen -ls` to get a list of active "Screens" The output looks like:
@@ -40,3 +41,4 @@ There are screens on:
 2 Sockets in /run/screen/S-colin.
 ```
 Note, one of the above screens is named `test`. These can be restarted either using the number (pid): `screen -r 804416` or by name: `screen -r test`
+For more, see <https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/>
