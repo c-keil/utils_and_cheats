@@ -9,3 +9,7 @@ see [this](/ssh_tools/README.md)
 
 ## makrdown suggestions
 [this](https://markdown.land/markdown-cheat-sheet) is a useful cheat sheet
+
+## Udev Rules
+Useful for handling connected devices such as /dev/ttyACM0. See [this](/udev_rules/ReadMe.md
+)
