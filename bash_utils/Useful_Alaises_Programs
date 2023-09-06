@@ -1,0 +1,13 @@
+#use `$ source` to load these
+
+#copy a path to clipboard 
+function cl {
+  readlink -f $1 -n | xclip -sel clip
+}
+
+#set default xclip clipboard
+alias xclip="xclip -sel clip"
+
+#turn on ros on conda computer
+# source /opt/ros/noetic/setup.bash
+alias ros='conda deactivate && source /opt/ros/noetic/setup.bash'
