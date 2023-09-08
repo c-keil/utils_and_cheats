@@ -11,6 +11,14 @@ Here is a list of useful bash shell features and programs
 ### Iterating Over Files
 `files=<path>*; for f in files; do echo $f; done`
 
+### Pattern Matching
+- basic matching with `*` or `?`
+- extended pattern matching with lists of patterns given as `(pattern1|pattern2|...|pattern_n)`
+    - `@(pattern1|pattern2)` matches one of the patterns
+    - `!()` matches none of the patterns
+    - `+()` matches one or more of the patterns
+    - there are others
+
 ### Parameter expansion
 Useful for working with paths
 - `${parameter}` basic usage expands a bash variable
