@@ -5,6 +5,7 @@ Here is a list of useful bash shell features and programs
 - xclip - copying text from command line
 - sed - replacing text
 - tr - replacing or removing text
+- printf - formatting strings: pad with zeros, limmit decimal places etc. 
 
 ## Tips
 ### Iterating Over Files
@@ -18,3 +19,5 @@ Useful for working with paths
 #### Specific Examples
 - Getting the last character of a path `f=<path>; echo ${f: -1:1}`
 - Changing a series of file names by replacing a pattern `for f in <path>*; do mv $f ${f/<pattern>/<replace with>}; done`
+- Iterating through dirs in a top level directory and renaming files to strip part of the name `for d in *_0[3456789]/*/; do for f in $d*.png; do f1=$(basename $f); mv ${f} $(dirname $f)/${f1/_*/}${f: -4}; done; done` example expanded result `mv ir_timelapse_09/ir_timelapse_10_norm/147_1688485662.0672388.png ir_timelapse_09/ir_timelapse_10_norm/147.png`
+- Left padding zeros `printf %03d $parameter`
