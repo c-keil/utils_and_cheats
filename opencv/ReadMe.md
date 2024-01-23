@@ -8,5 +8,6 @@ I have found that I often need more than one version of opecv for different c++ 
     - cd opencv-3x; mkdir build; cd build
     - `cmake -DCMAKE_INSTALL_PREFIX=install ..` this puts the `install` dir in (relative to) the build `folder`. You can do an absolute path
     - `cmake --build . --target install` builds and installs in the target install path
-3. You can point DBoW2 to the correct version by changing `find_package(OpenCV REQUIRED)` to 
-`find_package(OpenCV 3.4 REQUIRED PATHS /home/colin/Software/opencv-3.4.16/build/install)` in CMAKE
+3. You can point DBoW2 to the correct version from the command line by adding `-DOpenCV_DIR=/<path_to_opencv>/opencv/build` to the cmake command. Alternatively (not good practice) you can specify the path in the cmakelists.txt by changing`find_package(OpenCV REQUIRED)` to 
+`find_package(OpenCV 3.4 REQUIRED PATHS /home/colin/Software/opencv-3.4.16/build/install)` in CMAKE.
+Note, in general it is better to not hardcode things in cmake.
