@@ -6,6 +6,8 @@ Here is a list of useful bash shell features and programs
 - sed - replacing text
 - tr - replacing or removing text
 - printf - formatting strings: pad with zeros, limmit decimal places etc. 
+- ldd - see what libraries are used by an executable
+- lddtree - recursively see what libraries are used by an executable
 
 ## Tips
 ### Iterating Over Files
